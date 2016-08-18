@@ -18,8 +18,6 @@ namespace LinqToXml
 
         private static void UsingStandardQueryOperators()
         {
-
-
             XDocument document = XDocument.Load("Employees.xml");
             var developers = from element in document.Descendants("Job")
                 where element.Name == "Job" && element.Value == "Developer"
